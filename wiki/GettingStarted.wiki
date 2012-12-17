@@ -20,6 +20,17 @@ public RefImplTestStep() {
 }
 }}}
 
+*Add a constructor that complies with WsdlTestStep*. Example:
+{{{
+public RefImplTestStep(WsdlTestCase testCase, TestStepConfig config, boolean forLoadTest) {
+		super(testCase, config, true, forLoadTest);
+		// Display an icon for this test step
+		if (!forLoadTest) {
+			setIcon(getIcon());
+		}
+	}
+}}}
+
 *Implement the RuntimeWsdlTestStep methods*. Example:
 {{{
 @Override
