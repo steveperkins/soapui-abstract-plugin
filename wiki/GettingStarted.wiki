@@ -83,6 +83,7 @@ RuntimeWsdlTestStepLoader - Registering panel builder for RefImplTestStep
 == Troubleshooting ==
 If things did __not__ go as planned, check the following:
 <ul>
+<li>Is there already a project in your SoapUI workspace? Since SoapUI doesn't create an event when the application or a workspace opens, SoapUI Abstract Plugin relies upon a project-level load listener to scan for and register plugins. It won't work unless you load a workspace that already has at least one project.</li>
 <li>Is your custom plugin jar in `SOAP_UI_HOME/bin/ext/teststeps`?</li>
 <li>Does your custom plugin class extend WsdlTestStep and implement RuntimeWsdlTestStep?</li>
 <li>Does your custom plugin class override the `run(WsdlTestCase, TestStepConfig, boolean)` method? Your IDE probably created the signature for you, but make sure the last parameter is a primitive `boolean`, not an object wrapper.</li>
