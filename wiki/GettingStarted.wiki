@@ -5,7 +5,7 @@
 SoapUI Abstract Plugin makes it easier to write custom test steps for the SoapUI automated testing platform. Without SoapUI Abstract Plugin, a developer must create boilerplate factories and perform tedious XML configuration. SoapUI Abstract Plugin abstracts away the common parts of a SoapUI plugin so developers can focus on the _functionality_ of their custom plugin rather than its configuration.
 
 
-= Details =
+= Getting Started =
 
 *Preliminary note:* This guide references SOAP_UI_HOME, which is just your SoapUI installation directory. It is assumed that the reader is proficient with a Java IDE and has already created a Java project for custom plugin development.
 
