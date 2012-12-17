@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:soapui-listeners xmlns:tns="http://eviware.com/soapui/config">
+	<tns:listener id="ProjectLoadListener"
+	listenerClass="com.sperkins.soapui.listener.RuntimeWsdlTestStepLoader"    
+	listenerInterface="com.eviware.soapui.model.project.ProjectListener" /> 
+</tns:soapui-listeners>
