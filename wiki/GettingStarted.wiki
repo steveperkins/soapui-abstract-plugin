@@ -49,7 +49,7 @@ public RefImplTestStep() {
 }}}
 
 
-*Override the `run()` method*. This is where your custom functionality comes into play. This example is an extremely simple (and not very useful) custom test step:
+*Override the `run(WsdlTestCase, TestStepConfig, boolean)` method*. This is where your custom functionality comes into play. This example is an extremely simple (and not very useful) custom test step:
 {{{
 	@Override
 	public TestStepResult run(TestCaseRunner testRunner, TestCaseRunContext runContext) {
