@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<project name="soap-ui-plugin-ref-impl" default="jar" basedir=".">
+    <description>
+        Builds the soap-ui-plugin-ref-impl project into a distributable JAR
+    </description>
+    
+    <property name="build.dir" value="bin/classes"/>
+    <property name="dist.dir" value="dist"/>
+    
+    <path id="classpath">
+	  <fileset dir=".">
+	    <include name="**/*.jar"/>
+	  </fileset>
+	  	
+	  <pathelement path="${build.dir}"/>
+	</path>
+
+	<target name="clean">
+	    <delete dir="bin" />
+	    <delete dir="${dist.dir}" />
+	</target>
+	
+	<target name="init" depends="clean">
+	    <mkdir dir="${build.dir}" />
+	    <mkdir dir="${dist.dir}" />
+	</target>
+	
+	<target name="compile" depends="init">
+		<javac includeantruntime="false" srcdir="src" destdir="${build.dir}" classpathref="classpath"/>
+	</target>
+	
+	<target name="jar" depends="compile">
+		<jar destfile="${dist.dir}/${ant.project.name}-0.1.jar" basedir="${build.dir}"/>
+	</target>
+</project>
